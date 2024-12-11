@@ -8,9 +8,17 @@ const port = 3000
 app.use(bodyParser.json())
 app.use(express.static(__dirname + '/public'))
 
+app.listen(port, () => {
+    console.log('App is Live.')
+})
+
 const supabaseUrl = process.env.supabaseUrl;
 const supabaseKey = process.env.supabaseKey;
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
+
+app.get('/', (req, res) => {
+    res.sendFile('public/home.html', {root: __dirname})
+})
 
 app.get('/visitors', async (req, res) => {
     console.log('Attempting to get all vistors.')
@@ -66,8 +74,4 @@ app.post('/visitors', async (req, res) => {
         console.log('Successfully Retrieved Data');
         res.send(data);
     } 
-})
-
-app.listen(port, () => {
-    console.log('App is Live.')
 })
