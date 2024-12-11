@@ -29,7 +29,7 @@ app.get('/visitors', async (req, res) => {
         console.log('Error: ', error)
         res.send(error);
     } else {
-        console.log('Successfully Retrieved Data');
+        console.log('Successfully Retrieved Data.');
         res.send(data);
     } 
 })
@@ -71,7 +71,28 @@ app.post('/visitors', async (req, res) => {
         console.log('Error: ', error)
         res.send(error);
     } else {
-        console.log('Successfully Retrieved Data');
+        console.log('Successfully Retrieved Data.');
         res.send(data);
     } 
+})
+
+// 
+const axios = require('axios');
+const ipstackKey = process.env.ipstackKey;
+
+async function fetchIPData(ipAddress) {
+    const ipstackUrl = `http://api.ipstack.com/${ipAddress}?access_key=${ipstackKey}`;
+    try {
+        const response = await axios.get(ipstackUrl);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching IPStack Data', error.message);
+        throw new Error('Failed to fetch IPStack data.')
+    }
+}
+
+app.get('/userself-ip', async (req, res) => {
+    const userIP = req.query.ip;
+    const ipstackData = await fetchIPData(userIP);
+    res.json(ipstackData);
 })
