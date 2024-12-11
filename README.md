@@ -1,5 +1,5 @@
 # VirtualVisitors
-# Description of Project
+# The Virtual Visitor Tracker is a web-based tool designed to help businesses optimize their digital marketing strategies by collecting and analyzing real-time demographic and geographical data from website visitors using the IP Stack API. The project aims to provide businesses with valuable insights into their customer base, allowing them to tailor content, services, and marketing efforts to specific regional and demographic audiences. Built with HTML, CSS, JavaScript, React, and Bootstrap for the front end, and Node.js and a SQL database for the back end, the tool presents real-time visitor data through dynamic charts and graphs. Key pages include a Home Page displaying visitor analytics, an About Page outlining the company's mission and team, and a Help Page for FAQs and search functionality. The project targets website owners and marketers looking to improve user targeting and sales performance by leveraging detailed visitor data, thereby enhancing content and marketing campaigns with data-driven insights.
 # Description of target browsers (iOS? Android? Which ones?)
 # Link to Developer Manual
 # The audience of this document is future developers who will take over your system.
@@ -10,7 +10,7 @@
 # How to run your application on a server
 # How to run any tests you have written for your software
 # The API for your server application - all GET, POST, PATCH, etc endpoints, and what they each do
-# A clear set of expectations around known bugs and a road-map for future development.
+# A clear set of expectations around known bugs and a road map for future development.
 # Documentation needs to be written in Markdown (MD) files, nicely formatted
 # Documentation should be included in each team’s final code submission.
 # Documentation should be saved in your main project directory under "docs"
