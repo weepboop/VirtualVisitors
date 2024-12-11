@@ -10,7 +10,7 @@ document.getElementById('getUserIP').addEventListener('click', () => {
             fetch(`/userself-ip?ip=${userIP}`)
                 .then(response => response.json())
                 .then(data => {
-                    const display = ['ip', 'hostname', 'continent_code', 'continent_name', 'country_code',
+                    const display = ['ip', 'continent_code', 'continent_name', 'country_code',
                         'country_name', 'region_code', 'region_name', 'city', 'zip', 'latitude', 'longitude']
                     document.getElementById('displayBin').innerHTML = `<pre>${JSON.stringify(data, display, 2)}</pre>`;
                 })

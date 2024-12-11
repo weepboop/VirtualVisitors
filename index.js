@@ -39,7 +39,6 @@ app.post('/visitors', async (req, res) => {
     console.log('Request: ', req.body)
 
     const ip = req.body.ip;
-    const hostname = req.body.hostname;
     const continent_code = req.body.continent_code;
     const continent_name = req.body.continent_name;
     const country_code = req.body.country_code;
@@ -53,7 +52,6 @@ app.post('/visitors', async (req, res) => {
 
     const {data, error} = await supabase.from('visitors').insert({
         ip: ip,
-        hostname: hostname,
         continent_code: continent_code,
         continent_name: continent_name,
         country_code: country_code,
