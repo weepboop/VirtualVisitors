@@ -12,12 +12,13 @@
             }
         </style>
 
-        <link rel = "stylesheet" href="/css_files/VirVis.css">
-        <script src="/javascript_files/home.js" defer></script>
+        <link rel = "stylesheet" href="/VirtualVisitors/public/css_files/VirVis.css">
+        <script src="/VirtualVisitors/public/javascript_files/home.js" defer></script>
     </head>
 
     
     <body id="body">
+    <div class="flex">
         <!-- Header -->
          <header id="head">
             <h1>Virtual Visitors</h1>
@@ -32,12 +33,13 @@
         </nav>
             <!-- add button for users to find their own ip address
             if use weather api or image api then also add button to view current weather or image -->
-        <h1>Sample IPStack Usage!</h1>
-        <button id="getUserIP">What is my IP?</button>
-        <h2>Your IP Address is: </h2>
+            <div style="align-self: center;"><h1>Sample IPStack Usage!</h1></div>
+        <div style="flex-basis: 5px; align-self: center;"><button class="button-85" id="getUserIP">What is my IP?</button></div>
+        <div style="align-self: center;"><h2>Your IP Address is: </h2></div>
         <div id="displayBin"></div>
-        <h3>Here you are!</h3>
+        <div style="align-self: center;"><h3>Here you are!</h3></div>
         <div id="map"></div>
+    </div>
     </body>
 </html>
 
