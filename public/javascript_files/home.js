@@ -17,3 +17,20 @@ document.getElementById('getUserIP').addEventListener('click', () => {
         })
         .catch(error => console.error('Error Fetching IP Address: ', error));
 })
+
+//Leaflet.js Map Creator
+function createMap() {
+    var map = L.map('map');
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        minZoom: 10,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    map.locate({setView: true})
+    .on('locationerror', function(e){
+        console.log(e);
+        alert("Location access has been denied.");
+    });
+}
+
+window.onload = createMap

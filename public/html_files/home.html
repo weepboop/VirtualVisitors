@@ -1,15 +1,43 @@
 <html>
     <head>
         <title>Sample IPStack Usage!</title>
+        <!--Leaflet.js Map Creator-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+        <style>
+            #map {
+                height: 300px;
+            }
+        </style>
+
+        <link rel = "stylesheet" href="VirVis.css">
         <script src="/javascript_files/home.js" defer></script>
     </head>
 
-    <!-- add button for users to find their own ip address
+    
+    <body id="body">
+        <!-- Header -->
+         <header id="head">
+            <h1>Virtual Visitors</h1>
+         </header>
+        <!-- Navigation -->
+        <nav id="navi">   
+            <ul>
+               <li><a href="home.html">Home</a></li>
+               <li><a href="about.html">About</a></li>
+               <li><a href="ipstack.html">IP Stack</a></li>
+            </ul>
+        </nav>
+            <!-- add button for users to find their own ip address
             if use weather api or image api then also add button to view current weather or image -->
-    <body>
         <h1>Sample IPStack Usage!</h1>
         <button id="getUserIP">What is my IP?</button>
+        <h2>Your IP Address is: </h2>
         <div id="displayBin"></div>
+        <h3>Here you are!</h3>
+        <div id="map"></div>
     </body>
 </html>
 
