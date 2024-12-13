@@ -6,12 +6,18 @@
 # Devleoper Manual
 
 **Your Developer Manual covers:**
+Using the supplied repository link, clone the repository to your local computer before installing the application and its dependencies. Once the cloning process is complete, open the project folder in your terminal and do npm install. All of the required packages specified in the package.json file will be installed by this command. As prerequisites for this application, make sure your machine has both Node.js and npm installed. Create a.env file in the root directory and add the necessary variables if you need to specify environment variables. You might also wish to run npm install -g nodemon to globally install nodemon for more seamless development. This will help the server restart automatically while you're working on it.
 
 **How to install your application and all dependencies:**
+Go to the project directory and type the command npm start to launch the application on your local server. If nodemon is installed, you can start the application with automatic restarts for code changes by using the nodemon index.js command. The server will run on http://localhost:3000/ by default. To interact with the application, launch a web browser or use a program like Postman. You can use services like Heroku or Vercel if you wish to launch the application. Deploy using the platform's web interface or CLI after connecting your repository to it and configuring environment variables as necessary.
 
 **How to run your application on a server:**
+Automated tests are not yet included in the application. Frameworks like Jest or Mocha can be utilized if you wish to include tests. The command npm test in the terminal can be used to execute the test scripts after they have been written and added to the project. All test cases will be run by this command, and the outcomes will show whether the application performs as intended.
 
 **How to run any tests you have written for your software:**
+GET /: This endpoint verifies the server's operation. A JSON message, such {"message": "Server is running"}, is returned.
+/api/data POST: A JSON payload in the request body is used by this endpoint to get information such as a user's name and email. A success message, like {"message": "Data received successfully"}, is returned in response.
+Details regarding the input format, response format, and purpose should be included in any additional endpoints that are added.
 
 **The API for your server application - all GET, POST, PATCH, etc endpoints, and what they each do:**
 
