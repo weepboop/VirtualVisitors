@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Sample IPStack Usage!</title>
+        <title>IPStack Usage!</title>
         <!--Leaflet.js Map Creator-->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
@@ -12,30 +12,30 @@
             }
         </style>
 
-        <link rel = "stylesheet" href="/css_files/VirVis.css">
-        <script src="/javascript_files/home.js" defer></script>
+        <link rel = "stylesheet" href="/VirtualVisitors/public/css_files/VirVis.css">
+        <script src="/VirtualVisitors/public/javascript_files/home.js" defer></script>
     </head>
-
     
     <body id="body">
-    <div class="flex">
-        <!-- Header -->
-         <header id="head">
-            <h1>Virtual Visitors</h1>
-         </header>
-        <!-- Navigation -->
-        <nav id="navi">   
-            <ul>
-               <li><a href="/html_files/home.html">Home</a></li>
-               <li><a href="/html_files/about.html">About</a></li>
-               <li><a href="/html_files/ipstack.html">IP Stack</a></li>
-            </ul>
-        </nav>
+        <div class="flex">
+            <!-- Header -->
+             <header id="head">
+                <h1>Virtual Visitors</h1>
+             </header>
+            <!-- Navigation -->
+            <nav id="navi">   
+                <ul>
+                   <li><a href="home.html">Home</a></li>
+                   <li><a href="about.html">About</a></li>
+                   <li><a href="ipstack.html">IP Stack</a></li>
+                </ul>
+            </nav>
             <!-- add button for users to find their own ip address
             if use weather api or image api then also add button to view current weather or image -->
-            <div style="align-self: center;"><h1>Sample IPStack Usage!</h1></div>
-        <div style="flex-basis: 5px; align-self: center;"><button class="button-85" id="getUserIP">What is my IP?</button></div>
+            <div style="align-self: center;"><h1>IPStack Usage!</h1></div>
+        <div style="flex-basis: 5px; align-self: center;"><button class="button-85" id="getUserIP" onclick="createMap()">What is my IP?</button></div>
         <div style="align-self: center;"><h2>Your IP Address is: </h2></div>
+        <div style="font-size: larger; border-style: solid; align-self: flex-start; background-color: aqua; align-self: center;" id="userIP"></div>
         <div id="displayBin"></div>
         <div style="align-self: center;"><h3>Here you are!</h3></div>
         <div id="map"></div>
