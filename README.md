@@ -4,11 +4,6 @@
 **Description of target browsers:** Various modern browsers and devices will be compatible with the Virtual Visitor Tracker thanks to its design. It will work on Windows, macOS, and Linux and support the main desktop browsers, such as Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge. The tool will be compatible with the most popular mobile browsers, including Google Chrome on Android and Safari on iOS. Users will be able to use the tool and engage with real-time data on any device or screen size thanks to the completely responsive design, which makes use of Bootstrap to deliver a smooth and aesthetically consistent experience across PCs, tablets, and smartphones.
 
 # Devleoper Manual
-**The audience of this document is future developers who will take over your system:**
-
-**They know technical terms and have general knowledge about web applications, but do not have knowledge about your system design:**
-
-**You need to provide a technical document so that future developers can start setting up the application on their local machines, and keep working on the system development after you leave the team:**
 
 **Your Developer Manual covers:**
 
