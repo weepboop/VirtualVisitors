@@ -1,3 +1,5 @@
+const host = window.location.origin;
+
 function generateRandomPublicIP() {
     let octet1, octet2, octet3, octet4;
 

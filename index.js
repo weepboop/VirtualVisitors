@@ -90,7 +90,7 @@ async function fetchIPData(ipAddress) {
 }
 
 app.get('/userself-ip', async (req, res) => {
-    const userIP = req.query.ip;
+    const userIP = req.query.ip  || req.ip;
     const ipstackData = await fetchIPData(userIP);
     res.json(ipstackData);
 })

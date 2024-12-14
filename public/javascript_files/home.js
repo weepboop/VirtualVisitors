@@ -1,3 +1,4 @@
+const host = window.location.origin;
 // API that allows user to fetch their own ip address
 
 document.getElementById('getUserIP').addEventListener('click', () => {
@@ -20,12 +21,50 @@ document.getElementById('getUserIP').addEventListener('click', () => {
 })
 
 //Leaflet.js Map Creator
+// function createMap(latitude, longitude) {
+//     var map = L.map('map').setView([latitude, longitude], 15);
+
+//     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//         minZoom: 10,
+//         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+//     });
+// }
+
+
+let mapInstance; // Keep track of the map instance to avoid multiple initializations
+
+document.getElementById('getUserIP').addEventListener('click', () => {
+    const host = window.location.origin;
+
+    fetch(`${host}/userself-ip`)
+        .then(response => response.json())
+        .then(data => {
+            console.log('IP Data:', data);
+
+            // Display the user's IP address
+            document.getElementById('userIP').textContent = `IP: ${data.ip}`;
+
+            // Use latitude and longitude to create the map
+            if (data.latitude && data.longitude && data.latitude !== 0 && data.longitude !== 0) {
+                createMap(data.latitude, data.longitude);
+            } else {
+                console.error('Invalid geolocation data:', data);
+                alert('Unable to retrieve geolocation data.');
+            }
+        })
+        .catch(error => console.error('Error fetching IP data:', error));
+});
+
 function createMap(latitude, longitude) {
-    var map = L.map('map').setView([latitude, longitude], 15);
-
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        minZoom: 10,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    });
+    // Check if the map already exists
+    if (mapInstance) {
+        mapInstance.setView([latitude, longitude], 15); // Update the view
+    } else {
+        // Initialize the map
+        mapInstance = L.map('map').setView([latitude, longitude], 15);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            minZoom: 10,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(mapInstance);
+    }
 }
-
