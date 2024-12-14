@@ -90,7 +90,8 @@ async function fetchIPData(ipAddress) {
 }
 
 app.get('/userself-ip', async (req, res) => {
-    const userIP = req.query.ip  || req.ip;
+    const trueIPResponse = await axios.get('https://api.ipify.org?format=json');
+    const userIP = trueIPResponse.data.ip;
     const ipstackData = await fetchIPData(userIP);
     res.json(ipstackData);
 })
