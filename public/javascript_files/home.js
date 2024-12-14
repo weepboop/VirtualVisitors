@@ -20,17 +20,6 @@ document.getElementById('getUserIP').addEventListener('click', () => {
         .catch(error => console.error('Error Fetching IP Address: ', error));
 })
 
-//Leaflet.js Map Creator
-// function createMap(latitude, longitude) {
-//     var map = L.map('map').setView([latitude, longitude], 15);
-
-//     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//         minZoom: 10,
-//         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-//     });
-// }
-
-
 let mapInstance; // Keep track of the map instance to avoid multiple initializations
 
 document.getElementById('getUserIP').addEventListener('click', () => {
