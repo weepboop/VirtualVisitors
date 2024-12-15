@@ -14,7 +14,7 @@ Using the supplied repository link, clone the repository to your local computer 
 Go to the project directory and type the command npm start to launch the application on your local server. If nodemon is installed, you can start the application with automatic restarts for code changes by using the nodemon index.js command. The server will run on http://localhost:3000/ by default. To interact with the application, launch a web browser or use a program like Postman. You can use services like Heroku or Vercel if you wish to launch the application. Deploy using the platform's web interface or CLI after connecting your repository to it and configuring environment variables as necessary.
 
 **How to run any tests you have written for your software:**
-Automated tests are not yet included in the application. Frameworks like Jest or Mocha can be utilized if you wish to include tests. The command npm test in the terminal can be used to execute the test scripts after they have been written and added to the project. All test cases will be run by this command, and the outcomes will show whether the application performs as intended.
+Tests are included in the test.js file. To test index.js, run "npx jest" in the file directory terminal.
 
 **The API for your server application - all GET, POST, PATCH, etc endpoints, and what they each do:**
 GET /: This endpoint verifies the server's operation. A JSON message, such {"message": "Server is running"}, is returned.
